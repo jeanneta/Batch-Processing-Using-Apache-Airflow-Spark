@@ -85,7 +85,7 @@ airflow-spark
 └── .env                  
 ```
 
-1. Let’s start creating the [Dockerfile](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/Dockerfile) first for building the custom image.
+2. Creating the [Dockerfile](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/Dockerfile)  for building the custom image.
 
 ```python
 ## choose the base image and the python version
@@ -154,7 +154,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 #   --constaint "${HOME}/constraints.txt"
 ```
 
-1. Create file [requirements.txt:](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/requirements.txt)
+3. Create file [requirements.txt:](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/requirements.txt)
 
 ```python
 pyspark==3.5.1
@@ -163,7 +163,7 @@ mysql-connector-python==9.0.0
 pandas
 ```
 
-1. Build a custom image for apache-airflow and spark with all the dependencies installed
+4. Build a custom image for apache-airflow and spark with all the dependencies installed
 
 ```python
 ## build the custom image, 
@@ -176,7 +176,7 @@ docker build . -f Dockerfile --pull --tag custom-airflow-spark-0.1
 ## because of your requirements.txt
 ```
 
-1. Create .env file
+5. Create .env file
 
 This is the basic default .env
 
@@ -224,7 +224,7 @@ AIRFLOW__API__AUTH_BACKENDS=airflow.api.auth.backend.session
 
 ```
 
-1. Create [docker-compose.yaml:](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/docker-compose.yaml)
+6. Create [docker-compose.yaml:](https://github.com/jeanneta/Batch-Processing-Using-Apache-Airflow-Spark/blob/main/docker-compose.yaml)
 
 You can directly get the file of the latest image of apache-airflow from [https://airflow.apache.org/docs/apache-airflow/2.10.0/docker-compose.yaml](https://airflow.apache.org/docs/apache-airflow/2.9.3/docker-compose.yaml). 
 
@@ -411,7 +411,7 @@ airflow-spark
 │   ├──jars           
 ```
 
-1. Add your Airflow Connections for configurations
+7. Add your Airflow Connections for configurations
 
 First,  navigate to **Airflow UI** at `http://localhost:8082`(Im using this port).
 
@@ -480,7 +480,7 @@ df_result = spark.sql('''
 ''')
 ```
 
-1. **Total Films by Category**
+2. **Total Films by Category**
 
 ```python
 df_result = spark.sql('''

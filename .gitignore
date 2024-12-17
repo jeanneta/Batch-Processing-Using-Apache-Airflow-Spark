@@ -22,3 +22,4 @@ __pycache__/
 # Ignore specific Python file: test_connection_dag.py
 dags/test_connection_dag.py
 
+.DS_Store
