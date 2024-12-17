@@ -383,7 +383,7 @@ Notice the volumes added to the docker-compose.yaml
 # for spark functionality. like jdbc driver
 ```
 
-It's important to note that you’ll need to create a custom Docker image to accommodate all the required services. This may involve some trial and error to ensure everything functions correctly. Once your image is successfully built, you can proceed to start the containers with Docker.
+It's important to note that you’ll need to create a custom Docker image to accommodate all the required services. This may involve some trial and error to ensure everything functions correctly. Once your image is successfully built, you can start the containers with Docker.
 
 ```python
 docker compose up -d
