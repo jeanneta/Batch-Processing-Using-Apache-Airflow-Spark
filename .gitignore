@@ -1,0 +1,24 @@
+# Hide environment files
+.env
+
+# Ignore logs directory
+logs/
+
+# Ignore data directory
+data/
+
+# Ignore plugins directory
+plugins/
+
+# Ignore Spark jars
+spark/jars/
+
+# Ignore Python compiled files (__pycache__)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore specific Python file: test_connection_dag.py
+dags/test_connection_dag.py
+
