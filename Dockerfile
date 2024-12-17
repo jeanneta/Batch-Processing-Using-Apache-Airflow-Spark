@@ -42,6 +42,8 @@ RUN apt-get update \
 ## set up java home. Debian 12 bookworm comes with jdk-17 as default.
 # jdk-11 and jdk-8 are unavailable. any attempt to install those will throw errors.
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-arm64
+# For info, if your using mac os use java-17-openjdk-arm64
+# for windows user, change it to java-17-openjdk-amd64
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 RUN export JAVA_HOME
 
